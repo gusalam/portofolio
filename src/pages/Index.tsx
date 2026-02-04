@@ -13,19 +13,20 @@ import ScorpionCursor from "@/components/ScorpionCursor";
 import MusicPlayer, { MusicPlayerRef } from "@/components/MusicPlayer";
 import MatrixBackground from "@/components/MatrixBackground";
 import WelcomeModal from "@/components/WelcomeModal";
+import { useDayTheme } from "@/hooks/useDayTheme";
 
 const Index = () => {
   const [showCursor, setShowCursor] = useState(false);
   const [showWelcomeModal, setShowWelcomeModal] = useState(true);
   const [showLockedMessage, setShowLockedMessage] = useState(false);
   const musicPlayerRef = useRef<MusicPlayerRef>(null);
+  
+  // Apply day-based theme
+  useDayTheme();
 
   useEffect(() => {
     // Set dark mode as default
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme !== "light") {
-      document.documentElement.classList.add("dark");
-    }
+    document.documentElement.classList.add("dark");
 
     // Enable custom cursor after loading
     const timer = setTimeout(() => {

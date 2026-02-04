@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Cyberpunk Futuristic Theme - Light Mode (Secondary) */
+    /* Default/Light Mode Base */
     --background: 0 0% 98%;
     --foreground: 258 90% 10%;
 
@@ -49,8 +49,274 @@ All colors MUST be HSL.
     --gradient-dark: linear-gradient(180deg, hsl(258 20% 8%), hsl(258 30% 5%));
   }
 
+  /* ==============================
+     MONDAY - Navy Blue Theme
+     Kesan fokus, profesional, corporate
+     ============================== */
+  .dark.theme-monday {
+    --background: 220 60% 13%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 55% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 55% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 224 76% 48%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 40% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 224 76% 48%;
+    --accent-foreground: 0 0% 100%;
+
+    --border: 220 50% 20%;
+    --input: 220 50% 20%;
+    --ring: 221 83% 53%;
+
+    --glow-primary: 0 0 30px hsl(221 83% 53% / 0.6);
+    --glow-secondary: 0 0 30px hsl(224 76% 48% / 0.6);
+    --glow-strong: 0 0 50px hsl(221 83% 53% / 0.9);
+    
+    --gradient-primary: linear-gradient(135deg, hsl(221 83% 53%), hsl(224 76% 48%));
+    --gradient-dark: linear-gradient(180deg, hsl(220 60% 13%), hsl(220 65% 8%));
+  }
+
+  /* ==============================
+     TUESDAY - Dark Gray + Blue Theme
+     Kesan teknis, engineer, stabil
+     ============================== */
+  .dark.theme-tuesday {
+    --background: 220 14% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 13% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 13% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 221 83% 53%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 10% 15%;
+    --muted-foreground: 215 15% 60%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --border: 220 12% 18%;
+    --input: 220 12% 18%;
+    --ring: 217 91% 60%;
+
+    --glow-primary: 0 0 30px hsl(217 91% 60% / 0.6);
+    --glow-secondary: 0 0 30px hsl(221 83% 53% / 0.6);
+    --glow-strong: 0 0 50px hsl(217 91% 60% / 0.9);
+    
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(221 83% 53%));
+    --gradient-dark: linear-gradient(180deg, hsl(220 14% 8%), hsl(220 18% 4%));
+  }
+
+  /* ==============================
+     WEDNESDAY - Matrix Futuristik Theme
+     Kesan hacker, tech, developer identity
+     ============================== */
+  .dark.theme-wednesday {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 4%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 152 100% 50%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 145 80% 42%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 152 100% 50%;
+    --accent-foreground: 0 0% 0%;
+
+    --border: 152 30% 15%;
+    --input: 152 30% 15%;
+    --ring: 152 100% 50%;
+
+    --glow-primary: 0 0 30px hsl(152 100% 50% / 0.6);
+    --glow-secondary: 0 0 30px hsl(145 80% 42% / 0.6);
+    --glow-strong: 0 0 50px hsl(152 100% 50% / 0.9);
+    
+    --gradient-primary: linear-gradient(135deg, hsl(152 100% 50%), hsl(145 80% 42%));
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 0%), hsl(0 0% 2%));
+  }
+
+  /* ==============================
+     THURSDAY - Charcoal + Emerald Theme
+     Kesan modern, high-end, startup
+     ============================== */
+  .dark.theme-thursday {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 42% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 42% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 160 84% 39%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 158 64% 52%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 222 30% 16%;
+    --muted-foreground: 215 20% 60%;
+
+    --accent: 160 84% 39%;
+    --accent-foreground: 0 0% 100%;
+
+    --border: 222 35% 18%;
+    --input: 222 35% 18%;
+    --ring: 160 84% 39%;
+
+    --glow-primary: 0 0 30px hsl(160 84% 39% / 0.6);
+    --glow-secondary: 0 0 30px hsl(158 64% 52% / 0.6);
+    --glow-strong: 0 0 50px hsl(160 84% 39% / 0.9);
+    
+    --gradient-primary: linear-gradient(135deg, hsl(160 84% 39%), hsl(158 64% 52%));
+    --gradient-dark: linear-gradient(180deg, hsl(222 47% 11%), hsl(222 50% 6%));
+  }
+
+  /* ==============================
+     FRIDAY - Earth Tone Elegan Theme
+     Kesan dewasa, tenang, berkarakter
+     ============================== */
+  .dark.theme-friday {
+    --background: 25 38% 18%;
+    --foreground: 38 35% 90%;
+
+    --card: 25 35% 14%;
+    --card-foreground: 38 35% 90%;
+
+    --popover: 25 35% 14%;
+    --popover-foreground: 38 35% 90%;
+
+    --primary: 38 50% 80%;
+    --primary-foreground: 25 38% 12%;
+
+    --secondary: 30 40% 60%;
+    --secondary-foreground: 25 38% 12%;
+
+    --muted: 25 25% 22%;
+    --muted-foreground: 38 25% 65%;
+
+    --accent: 38 50% 80%;
+    --accent-foreground: 25 38% 12%;
+
+    --border: 25 30% 25%;
+    --input: 25 30% 25%;
+    --ring: 38 50% 80%;
+
+    --glow-primary: 0 0 30px hsl(38 50% 80% / 0.4);
+    --glow-secondary: 0 0 30px hsl(30 40% 60% / 0.4);
+    --glow-strong: 0 0 50px hsl(38 50% 80% / 0.6);
+    
+    --gradient-primary: linear-gradient(135deg, hsl(38 50% 80%), hsl(30 40% 60%));
+    --gradient-dark: linear-gradient(180deg, hsl(25 38% 18%), hsl(25 42% 10%));
+  }
+
+  /* ==============================
+     SATURDAY - Slate Soft Dark Theme
+     Kesan santai, tetap profesional
+     ============================== */
+  .dark.theme-saturday {
+    --background: 217 33% 17%;
+    --foreground: 210 40% 98%;
+
+    --card: 217 30% 13%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 217 30% 13%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 215 20% 65%;
+    --primary-foreground: 217 33% 12%;
+
+    --secondary: 215 16% 47%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 217 25% 22%;
+    --muted-foreground: 215 15% 58%;
+
+    --accent: 215 20% 65%;
+    --accent-foreground: 217 33% 12%;
+
+    --border: 217 25% 24%;
+    --input: 217 25% 24%;
+    --ring: 215 20% 65%;
+
+    --glow-primary: 0 0 30px hsl(215 20% 65% / 0.4);
+    --glow-secondary: 0 0 30px hsl(215 16% 47% / 0.4);
+    --glow-strong: 0 0 50px hsl(215 20% 65% / 0.6);
+    
+    --gradient-primary: linear-gradient(135deg, hsl(215 20% 65%), hsl(215 16% 47%));
+    --gradient-dark: linear-gradient(180deg, hsl(217 33% 17%), hsl(217 38% 10%));
+  }
+
+  /* ==============================
+     SUNDAY - Soft Blue Theme
+     Kesan friendly, human, approachable
+     ============================== */
+  .dark.theme-sunday {
+    --background: 220 20% 12%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 18% 9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 18% 9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 199 89% 60%;
+    --primary-foreground: 220 20% 8%;
+
+    --secondary: 201 96% 73%;
+    --secondary-foreground: 220 20% 8%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 210 15% 60%;
+
+    --accent: 199 89% 60%;
+    --accent-foreground: 220 20% 8%;
+
+    --border: 220 18% 20%;
+    --input: 220 18% 20%;
+    --ring: 199 89% 60%;
+
+    --glow-primary: 0 0 30px hsl(199 89% 60% / 0.6);
+    --glow-secondary: 0 0 30px hsl(201 96% 73% / 0.6);
+    --glow-strong: 0 0 50px hsl(199 89% 60% / 0.9);
+    
+    --gradient-primary: linear-gradient(135deg, hsl(199 89% 60%), hsl(201 96% 73%));
+    --gradient-dark: linear-gradient(180deg, hsl(220 20% 12%), hsl(220 25% 6%));
+  }
+
+  /* Default Dark Mode (Fallback - same as Wednesday Matrix) */
   .dark {
-    /* Cyberpunk Futuristic Theme - Dark Mode (Primary) */
     --background: 258 30% 5%;
     --foreground: 0 0% 98%;
 
@@ -79,10 +345,25 @@ All colors MUST be HSL.
     --input: 258 30% 15%;
     --ring: 258 90% 66%;
 
-    /* Neon Glow Effects - Enhanced for dark mode */
     --glow-primary: 0 0 30px hsl(258 90% 66% / 0.6);
     --glow-secondary: 0 0 30px hsl(217 91% 60% / 0.6);
     --glow-strong: 0 0 50px hsl(258 90% 66% / 0.9);
+  }
+
+  /* Smooth color transitions */
+  * {
+    transition: background-color 0.5s ease, 
+                border-color 0.5s ease, 
+                box-shadow 0.5s ease;
+  }
+
+  /* Exclude elements that should not transition */
+  button, a, input, textarea, select {
+    transition: background-color 0.3s ease, 
+                border-color 0.3s ease, 
+                box-shadow 0.3s ease,
+                color 0.3s ease,
+                transform 0.2s ease;
   }
 }
 
