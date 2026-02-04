@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Cyberpunk Futuristic Theme - Light Mode (Secondary) */
+    --background: 0 0% 98%;
+    --foreground: 258 90% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 258 90% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 258 90% 10%;
+
+    --primary: 258 90% 66%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 91% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 258 90% 66%;
+
+    --radius: 0.75rem;
+
+    /* Neon Glow Effects */
+    --glow-primary: 0 0 20px hsl(258 90% 66% / 0.5);
+    --glow-secondary: 0 0 20px hsl(217 91% 60% / 0.5);
+    --glow-strong: 0 0 40px hsl(258 90% 66% / 0.8);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(258 90% 66%), hsl(217 91% 60%));
+    --gradient-dark: linear-gradient(180deg, hsl(258 20% 8%), hsl(258 30% 5%));
+  }
+
+  .dark {
+    /* Cyberpunk Futuristic Theme - Dark Mode (Primary) */
+    --background: 258 30% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 258 25% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 258 25% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 258 90% 66%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 91% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 258 20% 15%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 258 30% 15%;
+    --input: 258 30% 15%;
+    --ring: 258 90% 66%;
+
+    /* Neon Glow Effects - Enhanced for dark mode */
+    --glow-primary: 0 0 30px hsl(258 90% 66% / 0.6);
+    --glow-secondary: 0 0 30px hsl(217 91% 60% / 0.6);
+    --glow-strong: 0 0 50px hsl(258 90% 66% / 0.9);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Smooth Scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-full;
+    box-shadow: var(--glow-primary);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/80;
+  }
+}
+
+@layer components {
+  /* Neon Glow Text */
+  .text-glow {
+    text-shadow: var(--glow-primary);
+  }
+
+  .text-glow-strong {
+    text-shadow: var(--glow-strong);
+  }
+
+  /* Neon Glow Box */
+  .box-glow {
+    box-shadow: var(--glow-primary);
+  }
+
+  .box-glow-hover {
+    transition: box-shadow 0.3s ease;
+  }
+
+  .box-glow-hover:hover {
+    box-shadow: var(--glow-strong);
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Gradient Background */
+  .gradient-bg {
+    background: var(--gradient-dark);
+  }
+
+  /* Hide default cursor for custom cursor */
+  body.custom-cursor * {
+    cursor: none !important;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
