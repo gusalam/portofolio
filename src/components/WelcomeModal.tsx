@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Play, LogOut } from "lucide-react";
 import { useRef, useEffect } from "react";
-import lockedBg from "@/assets/locked-bg.jpg";
+import lockedBg from "@/assets/locked-bg.gif";
 
 interface WelcomeModalProps {
   open: boolean;
@@ -34,7 +34,7 @@ const WelcomeModal = ({ open, onAccept, onDecline, showLockedMessage = false }: 
             backgroundImage: `url(${lockedBg})`,
           }}
         >
-          <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
+          <div className="absolute inset-0 bg-black/40" />
         </div>
       )}
       
