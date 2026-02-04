@@ -17,7 +17,7 @@ import WelcomeModal from "@/components/WelcomeModal";
 const Index = () => {
   const [showCursor, setShowCursor] = useState(false);
   const [showWelcomeModal, setShowWelcomeModal] = useState(true);
-  const [websiteBlocked, setWebsiteBlocked] = useState(false);
+  const [showLockedMessage, setShowLockedMessage] = useState(false);
   const musicPlayerRef = useRef<MusicPlayerRef>(null);
 
   useEffect(() => {
@@ -41,38 +41,19 @@ const Index = () => {
   };
 
   const handleDeclineMusic = () => {
-    setWebsiteBlocked(true);
-    setShowWelcomeModal(false);
-    alert(
-      "Mohon maaf, Anda harus memutar musik untuk melanjutkan. Silakan refresh halaman untuk memulai kembali."
-    );
+    setShowLockedMessage(true);
   };
-
-  if (websiteBlocked) {
-    return (
-      <div className="min-h-screen bg-black flex items-center justify-center">
-        <MatrixBackground />
-        <div className="z-10 text-center p-8">
-          <p className="text-xl font-poppins text-foreground mb-4">
-            Akses ditolak
-          </p>
-          <p className="text-muted-foreground">
-            Silakan refresh halaman untuk memulai kembali.
-          </p>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="min-h-screen bg-background text-foreground relative">
       <MatrixBackground />
       <WelcomeModal
-        open={showWelcomeModal}
+        open={showWelcomeModal || showLockedMessage}
         onAccept={handleAcceptMusic}
         onDecline={handleDeclineMusic}
+        showLockedMessage={showLockedMessage}
       />
-      {!showWelcomeModal && (
+      {!showWelcomeModal && !showLockedMessage && (
         <>
           <LoadingScreen />
           {showCursor && <ScorpionCursor />}
