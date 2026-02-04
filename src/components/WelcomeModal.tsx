@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Play, LogOut } from "lucide-react";
 import { useRef, useEffect } from "react";
-import musicPlayerBg from "@/assets/music-player-bg.png";
+import lockedBg from "@/assets/locked-bg.jpg";
 
 interface WelcomeModalProps {
   open: boolean;
@@ -31,7 +31,7 @@ const WelcomeModal = ({ open, onAccept, onDecline, showLockedMessage = false }: 
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url(${musicPlayerBg})`,
+            backgroundImage: `url(${lockedBg})`,
           }}
         >
           <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
