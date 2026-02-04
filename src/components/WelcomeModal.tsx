@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Play, LogOut } from "lucide-react";
+import { useRef, useEffect } from "react";
+import musicPlayerBg from "@/assets/music-player-bg.png";
 
 interface WelcomeModalProps {
   open: boolean;
@@ -9,12 +11,42 @@ interface WelcomeModalProps {
 }
 
 const WelcomeModal = ({ open, onAccept, onDecline, showLockedMessage = false }: WelcomeModalProps) => {
+  const lockedAudioRef = useRef<HTMLAudioElement>(null);
+
+  useEffect(() => {
+    if (showLockedMessage && lockedAudioRef.current) {
+      lockedAudioRef.current.volume = 0.4;
+      lockedAudioRef.current.play().catch(() => {
+        console.log("Locked audio autoplay prevented");
+      });
+    }
+  }, [showLockedMessage]);
+
   if (!open) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+      {/* Background Image with Overlay when locked */}
+      {showLockedMessage && (
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url(${musicPlayerBg})`,
+          }}
+        >
+          <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
+        </div>
+      )}
+      
       {/* Backdrop */}
-      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+      {!showLockedMessage && (
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+      )}
+      
+      {/* Locked Music */}
+      <audio ref={lockedAudioRef} loop>
+        <source src="/locked-music.mp3" type="audio/mpeg" />
+      </audio>
       
       {/* Modal */}
       <div 
