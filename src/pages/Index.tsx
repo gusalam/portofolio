@@ -13,16 +13,13 @@ import ScorpionCursor from "@/components/ScorpionCursor";
 import MusicPlayer, { MusicPlayerRef } from "@/components/MusicPlayer";
 import MatrixBackground from "@/components/MatrixBackground";
 import WelcomeModal from "@/components/WelcomeModal";
-import { useDayTheme } from "@/hooks/useDayTheme";
+ import { DayThemeProvider } from "@/hooks/useDayTheme";
 
-const Index = () => {
+ const IndexContent = () => {
   const [showCursor, setShowCursor] = useState(false);
   const [showWelcomeModal, setShowWelcomeModal] = useState(true);
   const [showLockedMessage, setShowLockedMessage] = useState(false);
   const musicPlayerRef = useRef<MusicPlayerRef>(null);
-  
-  // Apply day-based theme
-  useDayTheme();
 
   useEffect(() => {
     // Set dark mode as default
@@ -76,4 +73,12 @@ const Index = () => {
   );
 };
 
+ const Index = () => {
+   return (
+     <DayThemeProvider>
+       <IndexContent />
+     </DayThemeProvider>
+   );
+ };
+ 
 export default Index;
