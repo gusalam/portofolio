@@ -1,4 +1,4 @@
- import { useEffect, useState, useCallback } from "react";
+ import { useEffect, useState, useCallback, createContext, useContext, ReactNode } from "react";
 
  export type DayTheme = 
   | "monday" 
@@ -53,72 +53,50 @@
    document.documentElement.classList.add(`theme-${theme}`);
  };
  
-export const useDayTheme = () => {
-   const [currentTheme, setCurrentTheme] = useState<DayTheme>(getCurrentDayTheme);
-   const [isAutoMode, setIsAutoMode] = useState<boolean>(true);
-   const [lastCheckedDay, setLastCheckedDay] = useState<number>(new Date().getDay());
+ // Context types
+ interface ThemeContextType {
+   currentTheme: DayTheme;
+   themeName: string;
+   isAutoMode: boolean;
+   setManualTheme: (theme: DayTheme | null) => void;
+   allThemes: DayTheme[];
+   themeNames: Record<DayTheme, string>;
+ }
 
-   // Apply theme and update state
-   const applyTheme = useCallback((theme: DayTheme) => {
+ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+ 
+ // Provider component
+ export const DayThemeProvider = ({ children }: { children: ReactNode }) => {
+   const [currentTheme, setCurrentTheme] = useState<DayTheme>(() => {
      try {
-       applyThemeClass(theme);
-       setCurrentTheme(theme);
+       const saved = localStorage.getItem(THEME_STORAGE_KEY);
+       if (saved && saved !== AUTO_THEME_KEY && Object.values(dayThemes).includes(saved as DayTheme)) {
+         return saved as DayTheme;
+       }
+     } catch {}
+     return getCurrentDayTheme();
+   });
+   
+   const [isAutoMode, setIsAutoMode] = useState<boolean>(() => {
+     try {
+       const saved = localStorage.getItem(THEME_STORAGE_KEY);
+       return !saved || saved === AUTO_THEME_KEY;
+     } catch {
+       return true;
+     }
+   });
+   
+   const [lastCheckedDay, setLastCheckedDay] = useState<number>(() => new Date().getDay());
+ 
+   // Apply theme on mount and when it changes
+   useEffect(() => {
+     try {
+       applyThemeClass(currentTheme);
      } catch (error) {
        console.error("Error applying theme:", error);
-       // Fallback to Wednesday (Matrix theme)
        applyThemeClass("wednesday");
-       setCurrentTheme("wednesday");
      }
-   }, []);
- 
-   // Set manual theme override
-   const setManualTheme = useCallback((theme: DayTheme | null) => {
-     try {
-       if (theme === null) {
-         // Switch back to auto mode
-         localStorage.setItem(THEME_STORAGE_KEY, AUTO_THEME_KEY);
-         setIsAutoMode(true);
-         const dayTheme = getCurrentDayTheme();
-         applyTheme(dayTheme);
-       } else {
-         // Set manual override
-         localStorage.setItem(THEME_STORAGE_KEY, theme);
-         setIsAutoMode(false);
-         applyTheme(theme);
-       }
-     } catch (error) {
-       console.error("Error saving theme preference:", error);
-     }
-   }, [applyTheme]);
- 
-   // Initialize theme on mount
-   useEffect(() => {
-     const initializeTheme = () => {
-      try {
-         const savedPreference = localStorage.getItem(THEME_STORAGE_KEY);
-         
-         if (savedPreference && savedPreference !== AUTO_THEME_KEY) {
-           // User has manual preference
-           const isValidTheme = Object.values(dayThemes).includes(savedPreference as DayTheme);
-           if (isValidTheme) {
-             setIsAutoMode(false);
-             applyTheme(savedPreference as DayTheme);
-             return;
-           }
-         }
-         
-         // Auto mode - apply day-based theme
-         setIsAutoMode(true);
-         const dayTheme = getCurrentDayTheme();
-         applyTheme(dayTheme);
-      } catch (error) {
-        console.error("Error applying day theme:", error);
-         applyTheme("wednesday");
-      }
-    };
-
-     initializeTheme();
-   }, [applyTheme]);
+   }, [currentTheme]);
 
    // Check for day change periodically (every 30 seconds)
    useEffect(() => {
@@ -132,7 +110,7 @@ export const useDayTheme = () => {
          if (currentDay !== lastCheckedDay) {
            setLastCheckedDay(currentDay);
            const newTheme = dayThemes[currentDay] || "wednesday";
-           applyTheme(newTheme);
+           setCurrentTheme(newTheme);
          }
        } catch (error) {
          console.error("Error checking day change:", error);
@@ -140,16 +118,51 @@ export const useDayTheme = () => {
      }, 30000); // Check every 30 seconds
 
     return () => clearInterval(interval);
-   }, [isAutoMode, lastCheckedDay, applyTheme]);
+   }, [isAutoMode, lastCheckedDay]);
 
-   return { 
-     currentTheme, 
+   // Set manual theme override
+   const setManualTheme = useCallback((theme: DayTheme | null) => {
+     try {
+       if (theme === null) {
+         // Switch back to auto mode
+         localStorage.setItem(THEME_STORAGE_KEY, AUTO_THEME_KEY);
+         setIsAutoMode(true);
+         const dayTheme = getCurrentDayTheme();
+         setCurrentTheme(dayTheme);
+       } else {
+         // Set manual override
+         localStorage.setItem(THEME_STORAGE_KEY, theme);
+         setIsAutoMode(false);
+         setCurrentTheme(theme);
+       }
+     } catch (error) {
+       console.error("Error saving theme preference:", error);
+     }
+   }, []);
+ 
+   const value: ThemeContextType = {
+     currentTheme,
      themeName: themeNames[currentTheme],
      isAutoMode,
      setManualTheme,
      allThemes: Object.values(dayThemes) as DayTheme[],
-     themeNames
+     themeNames,
    };
+ 
+   return (
+     <ThemeContext.Provider value={value}>
+       {children}
+     </ThemeContext.Provider>
+   );
 };
 
+ // Hook to use theme context
+ export const useDayTheme = (): ThemeContextType => {
+   const context = useContext(ThemeContext);
+   if (context === undefined) {
+     throw new Error("useDayTheme must be used within a DayThemeProvider");
+   }
+   return context;
+ };
+ 
 export default useDayTheme;
