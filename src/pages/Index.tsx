@@ -43,7 +43,9 @@ import WelcomeModal from "@/components/WelcomeModal";
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground relative">
+     <div className="min-h-screen bg-background text-foreground relative overflow-x-hidden">
+       {/* Solid background layer */}
+       <div className="fixed inset-0 z-0 bg-background" />
       <MatrixBackground />
       <WelcomeModal
         open={showWelcomeModal || showLockedMessage}
@@ -56,7 +58,7 @@ import WelcomeModal from "@/components/WelcomeModal";
           <LoadingScreen />
           {showCursor && <ScorpionCursor />}
           <Navigation />
-          <main className="relative z-10">
+           <main className="relative z-10 bg-transparent">
             <Hero />
             <About />
             <Portfolio />
