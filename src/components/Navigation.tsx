@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ThemeToggle from "@/components/ThemeToggle";
+ import ThemeSelector from "@/components/ThemeSelector";
 import LanguageToggle from "@/components/LanguageToggle";
 import { useLanguage } from "@/hooks/useLanguage";
 
@@ -57,6 +58,7 @@ const Navigation = () => {
               </a>
             ))}
             <LanguageToggle />
+             <ThemeSelector />
             <ThemeToggle />
             <Button
               variant="default"
