@@ -38,12 +38,12 @@ const MatrixBackground = () => {
 
     // Animation
     const draw = () => {
-      // Semi-transparent black to create trail effect
-      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+       // Clear with very dark background for trail effect
+       ctx.fillStyle = "rgba(0, 0, 0, 0.08)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      // Green neon color
-      ctx.fillStyle = "#00ff00";
+       // Subtle green color (reduced brightness, no glow)
+       ctx.fillStyle = "rgba(0, 180, 80, 0.6)";
       ctx.font = `${fontSize}px monospace`;
 
       for (let i = 0; i < drops.length; i++) {
@@ -81,8 +81,8 @@ const MatrixBackground = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 z-0 pointer-events-none"
-      style={{ background: "#000000" }}
+       className="fixed inset-0 z-0 pointer-events-none opacity-[0.18]"
+       style={{ background: "transparent" }}
     />
   );
 };

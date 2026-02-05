@@ -38,6 +38,9 @@
  };
  
  const applyThemeClass = (theme: DayTheme) => {
+   // Add transition class for dramatic fade effect
+   document.documentElement.classList.add('theme-transitioning');
+   
    // Remove all day theme classes
    document.documentElement.classList.remove(
      "theme-monday",
@@ -51,6 +54,11 @@
    
    // Add current theme class
    document.documentElement.classList.add(`theme-${theme}`);
+   
+   // Remove transition class after animation
+   setTimeout(() => {
+     document.documentElement.classList.remove('theme-transitioning');
+   }, 350);
  };
  
  // Context types
