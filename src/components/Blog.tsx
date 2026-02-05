@@ -70,7 +70,7 @@ const Blog = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-orbitron font-bold gradient-text mb-4 text-glow">
+           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-orbitron font-bold gradient-text mb-4">
             {t("blog.title")}
           </h2>
           <p className="text-base sm:text-lg md:text-xl font-poppins text-muted-foreground max-w-3xl mx-auto">
@@ -95,7 +95,7 @@ const Blog = () => {
             {posts.map((post, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <Card
-                  className="group overflow-hidden bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/50 transition-all duration-300 box-glow-hover animate-fade-in"
+                   className="group overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-300 box-glow-hover animate-fade-in"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {/* Post Image */}
@@ -106,7 +106,7 @@ const Blog = () => {
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute top-4 left-4">
-                      <span className="inline-block px-3 py-1 text-xs font-poppins font-medium bg-primary text-primary-foreground rounded-full box-glow">
+                       <span className="inline-block px-3 py-1 text-xs font-poppins font-medium bg-primary text-primary-foreground rounded-full">
                         {post.category}
                       </span>
                     </div>

@@ -123,11 +123,11 @@ const Portfolio = () => {
       : projects.filter((project) => project.category === activeCategory);
 
   return (
-    <section id="portfolio" className="py-20 sm:py-24 lg:py-32 bg-muted/30">
+     <section id="portfolio" className="py-20 sm:py-24 lg:py-32 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-orbitron font-bold gradient-text mb-4 text-glow">
+           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-orbitron font-bold gradient-text mb-4">
             {t("portfolio.title")}
           </h2>
           <p className="text-base sm:text-lg md:text-xl font-poppins text-muted-foreground max-w-3xl mx-auto">
@@ -143,7 +143,7 @@ const Portfolio = () => {
               variant={activeCategory === category.key ? "default" : "outline"}
               className={`font-poppins text-xs sm:text-sm px-3 sm:px-4 py-2 transition-all duration-300 ${
                 activeCategory === category.key
-                  ? "bg-primary hover:bg-primary/90 box-glow"
+                   ? "bg-primary hover:bg-primary/90"
                   : "border-primary/30 text-foreground hover:border-primary/50 hover:bg-primary/10"
               }`}
               onClick={() => setActiveCategory(category.key)}
@@ -170,7 +170,7 @@ const Portfolio = () => {
             {filteredProjects.map((project, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <Card
-                  className="group overflow-hidden bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/50 transition-all duration-300 box-glow-hover animate-fade-in"
+                   className="group overflow-hidden bg-card border-border hover:border-primary/50 transition-all duration-300 box-glow-hover animate-fade-in"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   {/* Project Image */}
@@ -183,14 +183,14 @@ const Portfolio = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
                       <Button
                         size="icon"
-                        className="bg-primary hover:bg-primary/90 box-glow"
+                         className="bg-primary hover:bg-primary/90"
                       >
                         <ExternalLink className="w-5 h-5" />
                       </Button>
                       <Button
                         size="icon"
                         variant="outline"
-                        className="border-primary text-primary hover:bg-primary/10 box-glow"
+                         className="border-primary text-primary hover:bg-primary/10"
                       >
                         <Github className="w-5 h-5" />
                       </Button>

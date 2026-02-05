@@ -31,9 +31,7 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background border-b border-primary/20 ${
-        isScrolled ? "box-glow" : ""
-      }`}
+       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background border-b border-border"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
@@ -54,7 +52,7 @@ const Navigation = () => {
                 className="px-3 lg:px-4 py-2 text-sm lg:text-base font-poppins text-foreground hover:text-primary transition-colors relative group"
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300 box-glow"></span>
+                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
             <LanguageToggle />

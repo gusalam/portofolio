@@ -414,24 +414,24 @@ All colors MUST be HSL.
 @layer components {
   /* Neon Glow Text */
   .text-glow {
-    text-shadow: var(--glow-primary);
+     text-shadow: 0 0 8px hsl(var(--primary) / 0.3);
   }
 
   .text-glow-strong {
-    text-shadow: var(--glow-strong);
+     text-shadow: 0 0 12px hsl(var(--primary) / 0.35);
   }
 
   /* Neon Glow Box */
   .box-glow {
-    box-shadow: var(--glow-primary);
+     box-shadow: 0 0 10px hsl(var(--primary) / 0.2);
   }
 
   .box-glow-hover {
-    transition: box-shadow 0.3s ease;
+     transition: box-shadow 0.25s ease, border-color 0.25s ease;
   }
 
   .box-glow-hover:hover {
-    box-shadow: var(--glow-strong);
+     box-shadow: 0 0 15px hsl(var(--primary) / 0.25);
   }
 
   /* Gradient Text */
@@ -460,8 +460,8 @@ All colors MUST be HSL.
  
    /* Glass effect - limited blur for modals only */
    .glass-effect {
-     backdrop-filter: blur(6px);
-     @apply bg-card/90;
+     backdrop-filter: blur(4px);
+     @apply bg-card;
    }
 }
 

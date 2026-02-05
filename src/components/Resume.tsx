@@ -48,7 +48,7 @@ const Resume = () => {
   return (
     <section id="resume" className="py-20 bg-background relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-secondary/5 pointer-events-none"></div>
+       <div className="absolute inset-0 bg-gradient-to-b from-primary/3 via-transparent to-secondary/3 pointer-events-none"></div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
@@ -63,11 +63,11 @@ const Resume = () => {
 
         {/* Download Resume Section */}
         <div className="max-w-4xl mx-auto mb-16">
-          <Card className="bg-card/50 backdrop-blur-sm border-primary/20 box-glow-hover overflow-hidden">
+           <Card className="bg-card border-border box-glow-hover overflow-hidden">
             <CardContent className="p-8 md:p-12 text-center">
               <div className="mb-6">
-                <div className="w-20 h-20 mx-auto mb-4 bg-gradient-primary rounded-full flex items-center justify-center box-glow">
-                  <Download className="w-10 h-10 text-white" />
+                 <div className="w-20 h-20 mx-auto mb-4 bg-primary rounded-full flex items-center justify-center">
+                   <Download className="w-10 h-10 text-primary-foreground" />
                 </div>
                 <h3 className="text-2xl font-orbitron font-bold text-foreground mb-2">
                   {t("resume.download")}
@@ -109,7 +109,7 @@ const Resume = () => {
               {certificates.map((cert, index) => (
                 <CarouselItem key={index} className="md:basis-1/2">
                   <Card
-                    className="bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/50 overflow-hidden group cursor-pointer transition-all duration-300 hover:scale-[1.02] box-glow-hover"
+                     className="bg-card border-border hover:border-primary/50 overflow-hidden group cursor-pointer transition-all duration-300 hover:scale-[1.02] box-glow-hover"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <div className="relative overflow-hidden">
@@ -118,8 +118,8 @@ const Resume = () => {
                         alt={cert.title}
                         className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-60"></div>
-                      <div className="absolute top-4 right-4 bg-primary/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-poppins font-semibold text-white">
+                       <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent opacity-50"></div>
+                       <div className="absolute top-4 right-4 bg-primary px-3 py-1 rounded-full text-xs font-poppins font-semibold text-primary-foreground">
                         {cert.year}
                       </div>
                     </div>
