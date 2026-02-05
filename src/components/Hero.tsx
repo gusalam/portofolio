@@ -60,18 +60,18 @@ const Hero = () => {
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-background/80"></div>
+         <div className="absolute inset-0 bg-background/90"></div>
       </div>
 
       {/* Animated Grid */}
-      <div className="absolute inset-0 z-0 opacity-20">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-secondary/10"></div>
+       <div className="absolute inset-0 z-0 opacity-10">
+         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-secondary/5"></div>
         <div
           className="absolute inset-0"
           style={{
             backgroundImage: `
-              linear-gradient(to right, hsl(var(--primary) / 0.1) 1px, transparent 1px),
-              linear-gradient(to bottom, hsl(var(--primary) / 0.1) 1px, transparent 1px)
+               linear-gradient(to right, hsl(var(--primary) / 0.08) 1px, transparent 1px),
+               linear-gradient(to bottom, hsl(var(--primary) / 0.08) 1px, transparent 1px)
             `,
             backgroundSize: "50px 50px",
           }}
@@ -82,12 +82,12 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-10 text-center">
         <div className="animate-fade-in">
           {/* Greeting */}
-          <p className="text-primary text-base sm:text-lg md:text-xl font-poppins font-medium mb-4 text-glow">
+           <p className="text-primary text-base sm:text-lg md:text-xl font-poppins font-medium mb-4">
             {t("hero.greeting")}
           </p>
 
           {/* Name */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-orbitron font-bold mb-6 gradient-text text-glow-strong">
+           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-orbitron font-bold mb-6 gradient-text">
             Fikih Sulaiman Pratama
           </h1>
 
@@ -141,7 +141,7 @@ const Hero = () => {
           href="#about"
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"
         >
-          <ArrowDown className="w-6 h-6 sm:w-8 sm:h-8 text-primary box-glow" />
+           <ArrowDown className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
         </a>
       </div>
     </section>

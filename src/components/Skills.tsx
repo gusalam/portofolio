@@ -76,7 +76,7 @@ const Skills = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-orbitron font-bold gradient-text mb-4 text-glow">
+           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-orbitron font-bold gradient-text mb-4">
             {t("skills.title")}
           </h2>
           <p className="text-base sm:text-lg md:text-xl font-poppins text-muted-foreground max-w-3xl mx-auto">
@@ -89,10 +89,10 @@ const Skills = () => {
           {skillCategories.map((category, categoryIndex) => (
             <Card
               key={categoryIndex}
-              className="p-6 sm:p-8 bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/50 transition-all duration-300 box-glow-hover animate-fade-in"
+               className="p-6 sm:p-8 bg-card border-border hover:border-primary/50 transition-all duration-300 box-glow-hover animate-fade-in"
               style={{ animationDelay: `${categoryIndex * 100}ms` }}
             >
-              <h3 className="text-xl sm:text-2xl font-orbitron font-bold text-primary mb-6 text-glow">
+               <h3 className="text-xl sm:text-2xl font-orbitron font-bold text-primary mb-6">
                 {category.category}
               </h3>
               <div className="space-y-6">

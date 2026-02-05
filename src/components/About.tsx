@@ -52,11 +52,11 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 sm:py-24 lg:py-32 bg-muted/30">
+     <section id="about" className="py-20 sm:py-24 lg:py-32 bg-card">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-orbitron font-bold gradient-text mb-4 text-glow">
+           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-orbitron font-bold gradient-text mb-4">
             {t("about.title")}
           </h2>
           <p className="text-base sm:text-lg md:text-xl font-poppins text-muted-foreground max-w-3xl mx-auto">
@@ -66,7 +66,7 @@ const About = () => {
 
         {/* Introduction */}
         <div className="max-w-4xl mx-auto mb-16 sm:mb-20">
-          <Card className="p-6 sm:p-8 md:p-10 bg-card/50 backdrop-blur-sm border-primary/20 box-glow-hover">
+           <Card className="p-6 sm:p-8 md:p-10 bg-background border-border box-glow-hover">
             <p className="text-sm sm:text-base md:text-lg font-poppins text-foreground leading-relaxed mb-6">
               {t("about.bio1")}
             </p>
@@ -81,11 +81,11 @@ const About = () => {
           {values.map((value, index) => (
             <Card
               key={index}
-              className="p-6 bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/50 transition-all duration-300 box-glow-hover group text-center"
+               className="p-6 bg-background border-border hover:border-primary/50 transition-all duration-300 box-glow-hover group text-center"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="mb-4 flex justify-center">
-                <div className="p-3 bg-primary/10 rounded-lg box-glow group-hover:scale-110 transition-transform">
+                 <div className="p-3 bg-primary/10 rounded-lg group-hover:scale-110 transition-transform">
                   <value.icon className="w-8 h-8 text-primary" />
                 </div>
               </div>
@@ -112,13 +112,13 @@ const About = () => {
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div className="flex-shrink-0">
-                  <div className="w-20 sm:w-24 h-20 sm:h-24 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center box-glow">
+                   <div className="w-20 sm:w-24 h-20 sm:h-24 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center">
                     <span className="text-xl sm:text-2xl font-orbitron font-bold text-primary">
                       {item.year}
                     </span>
                   </div>
                 </div>
-                <Card className="flex-1 p-4 sm:p-6 bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/50 transition-all duration-300 box-glow-hover">
+                 <Card className="flex-1 p-4 sm:p-6 bg-background border-border hover:border-primary/50 transition-all duration-300 box-glow-hover">
                   <h4 className="text-lg sm:text-xl font-orbitron font-semibold text-foreground mb-2">
                     {item.title}
                   </h4>

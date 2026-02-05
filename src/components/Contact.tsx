@@ -58,11 +58,11 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 sm:py-24 lg:py-32 bg-muted/30">
+     <section id="contact" className="py-20 sm:py-24 lg:py-32 bg-card">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16 animate-fade-in">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-orbitron font-bold gradient-text mb-4 text-glow">
+           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-orbitron font-bold gradient-text mb-4">
             {t("contact.title")}
           </h2>
           <p className="text-base sm:text-lg md:text-xl font-poppins text-muted-foreground max-w-3xl mx-auto">
@@ -72,7 +72,7 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 max-w-6xl mx-auto">
           {/* Contact Form */}
-          <Card className="p-6 sm:p-8 bg-card/50 backdrop-blur-sm border-primary/20 box-glow-hover">
+           <Card className="p-6 sm:p-8 bg-background border-border box-glow-hover">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-sm font-poppins font-medium text-foreground mb-2">
@@ -84,7 +84,7 @@ const Contact = () => {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="bg-background/50 border-primary/30 focus:border-primary transition-colors"
+                   className="bg-muted border-border focus:border-primary transition-colors"
                 />
               </div>
 
@@ -98,7 +98,7 @@ const Contact = () => {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="bg-background/50 border-primary/30 focus:border-primary transition-colors"
+                   className="bg-muted border-border focus:border-primary transition-colors"
                 />
               </div>
 
@@ -112,7 +112,7 @@ const Contact = () => {
                   required
                   value={formData.subject}
                   onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                  className="bg-background/50 border-primary/30 focus:border-primary transition-colors"
+                   className="bg-muted border-border focus:border-primary transition-colors"
                 />
               </div>
 
@@ -126,7 +126,7 @@ const Contact = () => {
                   required
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="bg-background/50 border-primary/30 focus:border-primary transition-colors resize-none"
+                   className="bg-muted border-border focus:border-primary transition-colors resize-none"
                 />
               </div>
 
@@ -148,7 +148,7 @@ const Contact = () => {
               {contactInfo.map((info, index) => (
                 <Card
                   key={index}
-                  className="p-5 sm:p-6 bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/50 transition-all duration-300 box-glow-hover group"
+                   className="p-5 sm:p-6 bg-background border-border hover:border-primary/50 transition-all duration-300 box-glow-hover group"
                 >
                   <a
                     href={info.link}
@@ -156,7 +156,7 @@ const Contact = () => {
                     target={info.link.startsWith("http") ? "_blank" : undefined}
                     rel={info.link.startsWith("http") ? "noopener noreferrer" : undefined}
                   >
-                    <div className="p-3 bg-primary/10 rounded-lg box-glow group-hover:scale-110 transition-transform">
+                     <div className="p-3 bg-primary/10 rounded-lg group-hover:scale-110 transition-transform">
                       <info.icon className="w-6 h-6 text-primary" />
                     </div>
                     <div>
@@ -173,7 +173,7 @@ const Contact = () => {
             </div>
 
             {/* Map */}
-            <Card className="overflow-hidden bg-card/50 backdrop-blur-sm border-primary/20 box-glow-hover">
+             <Card className="overflow-hidden bg-background border-border box-glow-hover">
               <div className="relative h-64 sm:h-80">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3957.8449645788805!2d112.76051207499805!3d-7.259219692757477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMTUnMzMuMiJTIDExMsKwNDUnNDcuNiJF!5e0!3m2!1sen!2sid!4v1736789012345!5m2!1sen!2sid"
@@ -189,7 +189,7 @@ const Contact = () => {
             </Card>
 
             {/* Social Links */}
-            <Card className="p-6 bg-card/50 backdrop-blur-sm border-primary/20 box-glow-hover text-center">
+             <Card className="p-6 bg-background border-border box-glow-hover text-center">
               <h3 className="text-xl font-orbitron font-bold text-foreground mb-4">
                 {t("contact.followMe")}
               </h3>
