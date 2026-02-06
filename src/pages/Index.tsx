@@ -56,9 +56,8 @@ import WelcomeModal from "@/components/WelcomeModal";
       {!showWelcomeModal && !showLockedMessage && (
         <>
           <LoadingScreen />
-          {showCursor && <ScorpionCursor />}
           <Navigation />
-           <main className="relative z-10 bg-transparent">
+          <main className="relative z-10 bg-transparent">
             <Hero />
             <About />
             <Portfolio />
