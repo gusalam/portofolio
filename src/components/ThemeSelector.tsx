@@ -13,15 +13,15 @@
  const ThemeSelector = () => {
    const { currentTheme, isAutoMode, setManualTheme, allThemes } = useDayTheme();
  
-   const themeColors: Record<DayTheme, string> = {
-     monday: "bg-[#1E3A8A]",
-     tuesday: "bg-[#2563EB]",
-     wednesday: "bg-[#00FF88]",
-     thursday: "bg-[#10B981]",
-     friday: "bg-[#E5D3B3]",
-     saturday: "bg-[#64748B]",
-     sunday: "bg-[#38BDF8]",
-   };
+  const themeColors: Record<DayTheme, string> = {
+    monday: "bg-[#EF4444]",
+    tuesday: "bg-[#F97316]",
+    wednesday: "bg-[#EAB308]",
+    thursday: "bg-[#22C55E]",
+    friday: "bg-[#3B82F6]",
+    saturday: "bg-[#6366F1]",
+    sunday: "bg-[#A855F7]",
+  };
  
    return (
      <DropdownMenu>
