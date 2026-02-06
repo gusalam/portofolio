@@ -50,56 +50,170 @@ All colors MUST be HSL.
   }
 
   /* ==============================
-     MONDAY - Navy Blue Theme
-     Kesan fokus, profesional, corporate
+     MONDAY - Merah (Red) Theme
+     Kesan berani, energi, semangat
      ============================== */
   .dark.theme-monday {
-     --background: 220 65% 8%;
-    --foreground: 210 40% 98%;
+    --background: 0 40% 6%;
+    --foreground: 0 20% 98%;
 
-     --card: 220 60% 12%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 35% 10%;
+    --card-foreground: 0 20% 98%;
 
-     --popover: 220 60% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 35% 10%;
+    --popover-foreground: 0 20% 98%;
 
-    --primary: 221 83% 53%;
+    --primary: 0 72% 51%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 224 76% 48%;
+    --secondary: 0 65% 42%;
     --secondary-foreground: 0 0% 100%;
 
-     --muted: 220 50% 15%;
-     --muted-foreground: 215 25% 70%;
+    --muted: 0 30% 14%;
+    --muted-foreground: 0 20% 70%;
 
-    --accent: 224 76% 48%;
+    --accent: 0 72% 51%;
     --accent-foreground: 0 0% 100%;
 
-     --border: 220 50% 18%;
-     --input: 220 50% 18%;
-    --ring: 221 83% 53%;
+    --border: 0 30% 18%;
+    --input: 0 30% 18%;
+    --ring: 0 72% 51%;
 
-     --glow-primary: 0 0 15px hsl(221 83% 53% / 0.35);
-     --glow-secondary: 0 0 15px hsl(224 76% 48% / 0.35);
-     --glow-strong: 0 0 25px hsl(221 83% 53% / 0.5);
+    --glow-primary: 0 0 15px hsl(0 72% 51% / 0.35);
+    --glow-secondary: 0 0 15px hsl(0 65% 42% / 0.35);
+    --glow-strong: 0 0 25px hsl(0 72% 51% / 0.5);
     
-    --gradient-primary: linear-gradient(135deg, hsl(221 83% 53%), hsl(224 76% 48%));
-     --gradient-dark: linear-gradient(180deg, hsl(220 65% 8%), hsl(220 70% 4%));
+    --gradient-primary: linear-gradient(135deg, hsl(0 72% 51%), hsl(0 65% 42%));
+    --gradient-dark: linear-gradient(180deg, hsl(0 40% 6%), hsl(0 45% 3%));
   }
 
   /* ==============================
-     TUESDAY - Dark Gray + Blue Theme
-     Kesan teknis, engineer, stabil
+     TUESDAY - Jingga (Orange) Theme
+     Kesan hangat, kreatif, antusias
      ============================== */
   .dark.theme-tuesday {
-     --background: 220 20% 6%;
-    --foreground: 210 40% 98%;
+    --background: 25 40% 6%;
+    --foreground: 30 30% 98%;
 
-     --card: 220 18% 10%;
-    --card-foreground: 210 40% 98%;
+    --card: 25 35% 10%;
+    --card-foreground: 30 30% 98%;
 
-     --popover: 220 18% 10%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 25 35% 10%;
+    --popover-foreground: 30 30% 98%;
+
+    --primary: 25 95% 53%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 30 90% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 25 30% 14%;
+    --muted-foreground: 25 25% 68%;
+
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --border: 25 30% 18%;
+    --input: 25 30% 18%;
+    --ring: 25 95% 53%;
+
+    --glow-primary: 0 0 15px hsl(25 95% 53% / 0.35);
+    --glow-secondary: 0 0 15px hsl(30 90% 45% / 0.35);
+    --glow-strong: 0 0 25px hsl(25 95% 53% / 0.5);
+    
+    --gradient-primary: linear-gradient(135deg, hsl(25 95% 53%), hsl(30 90% 45%));
+    --gradient-dark: linear-gradient(180deg, hsl(25 40% 6%), hsl(25 45% 3%));
+  }
+
+  /* ==============================
+     WEDNESDAY - Kuning (Yellow) Theme
+     Kesan ceria, optimis, cerah
+     ============================== */
+  .dark.theme-wednesday {
+    --background: 45 35% 6%;
+    --foreground: 50 30% 98%;
+
+    --card: 45 30% 10%;
+    --card-foreground: 50 30% 98%;
+
+    --popover: 45 30% 10%;
+    --popover-foreground: 50 30% 98%;
+
+    --primary: 48 96% 53%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 45 90% 45%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 45 25% 14%;
+    --muted-foreground: 45 20% 68%;
+
+    --accent: 48 96% 53%;
+    --accent-foreground: 0 0% 0%;
+
+    --border: 45 25% 18%;
+    --input: 45 25% 18%;
+    --ring: 48 96% 53%;
+
+    --glow-primary: 0 0 15px hsl(48 96% 53% / 0.35);
+    --glow-secondary: 0 0 15px hsl(45 90% 45% / 0.35);
+    --glow-strong: 0 0 25px hsl(48 96% 53% / 0.5);
+    
+    --gradient-primary: linear-gradient(135deg, hsl(48 96% 53%), hsl(45 90% 45%));
+    --gradient-dark: linear-gradient(180deg, hsl(45 35% 6%), hsl(45 40% 3%));
+  }
+
+  /* ==============================
+     THURSDAY - Hijau (Green) Theme
+     Kesan segar, natural, harmonis
+     ============================== */
+  .dark.theme-thursday {
+    --background: 140 35% 6%;
+    --foreground: 140 25% 98%;
+
+    --card: 140 30% 10%;
+    --card-foreground: 140 25% 98%;
+
+    --popover: 140 30% 10%;
+    --popover-foreground: 140 25% 98%;
+
+    --primary: 142 71% 45%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 145 65% 38%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 140 25% 14%;
+    --muted-foreground: 140 20% 68%;
+
+    --accent: 142 71% 45%;
+    --accent-foreground: 0 0% 0%;
+
+    --border: 140 25% 18%;
+    --input: 140 25% 18%;
+    --ring: 142 71% 45%;
+
+    --glow-primary: 0 0 15px hsl(142 71% 45% / 0.35);
+    --glow-secondary: 0 0 15px hsl(145 65% 38% / 0.35);
+    --glow-strong: 0 0 25px hsl(142 71% 45% / 0.5);
+    
+    --gradient-primary: linear-gradient(135deg, hsl(142 71% 45%), hsl(145 65% 38%));
+    --gradient-dark: linear-gradient(180deg, hsl(140 35% 6%), hsl(140 40% 3%));
+  }
+
+  /* ==============================
+     FRIDAY - Biru (Blue) Theme
+     Kesan tenang, profesional, terpercaya
+     ============================== */
+  .dark.theme-friday {
+    --background: 215 45% 6%;
+    --foreground: 210 30% 98%;
+
+    --card: 215 40% 10%;
+    --card-foreground: 210 30% 98%;
+
+    --popover: 215 40% 10%;
+    --popover-foreground: 210 30% 98%;
 
     --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
@@ -107,212 +221,98 @@ All colors MUST be HSL.
     --secondary: 221 83% 53%;
     --secondary-foreground: 0 0% 100%;
 
-     --muted: 220 15% 14%;
-     --muted-foreground: 215 20% 68%;
+    --muted: 215 35% 14%;
+    --muted-foreground: 215 25% 68%;
 
     --accent: 217 91% 60%;
     --accent-foreground: 0 0% 100%;
 
-     --border: 220 15% 16%;
-     --input: 220 15% 16%;
+    --border: 215 35% 18%;
+    --input: 215 35% 18%;
     --ring: 217 91% 60%;
 
-     --glow-primary: 0 0 15px hsl(217 91% 60% / 0.35);
-     --glow-secondary: 0 0 15px hsl(221 83% 53% / 0.35);
-     --glow-strong: 0 0 25px hsl(217 91% 60% / 0.5);
+    --glow-primary: 0 0 15px hsl(217 91% 60% / 0.35);
+    --glow-secondary: 0 0 15px hsl(221 83% 53% / 0.35);
+    --glow-strong: 0 0 25px hsl(217 91% 60% / 0.5);
     
     --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(221 83% 53%));
-     --gradient-dark: linear-gradient(180deg, hsl(220 20% 6%), hsl(220 25% 3%));
+    --gradient-dark: linear-gradient(180deg, hsl(215 45% 6%), hsl(215 50% 3%));
   }
 
   /* ==============================
-     WEDNESDAY - Matrix Futuristik Theme
-     Kesan hacker, tech, developer identity
-     ============================== */
-  .dark.theme-wednesday {
-     --background: 150 10% 4%;
-     --foreground: 0 0% 96%;
-
-     --card: 150 12% 8%;
-     --card-foreground: 0 0% 96%;
-
-     --popover: 150 12% 8%;
-     --popover-foreground: 0 0% 96%;
-
-     --primary: 152 75% 45%;
-    --primary-foreground: 0 0% 0%;
-
-     --secondary: 145 65% 38%;
-    --secondary-foreground: 0 0% 0%;
-
-     --muted: 150 10% 12%;
-     --muted-foreground: 0 0% 68%;
-
-     --accent: 152 75% 45%;
-    --accent-foreground: 0 0% 0%;
-
-     --border: 152 25% 16%;
-     --input: 152 25% 16%;
-     --ring: 152 75% 45%;
-
-     --glow-primary: 0 0 15px hsl(152 75% 45% / 0.3);
-     --glow-secondary: 0 0 15px hsl(145 65% 38% / 0.3);
-     --glow-strong: 0 0 25px hsl(152 75% 45% / 0.45);
-    
-     --gradient-primary: linear-gradient(135deg, hsl(152 75% 45%), hsl(145 65% 38%));
-     --gradient-dark: linear-gradient(180deg, hsl(150 10% 4%), hsl(150 12% 2%));
-  }
-
-  /* ==============================
-     THURSDAY - Charcoal + Emerald Theme
-     Kesan modern, high-end, startup
-     ============================== */
-  .dark.theme-thursday {
-     --background: 222 50% 7%;
-    --foreground: 210 40% 98%;
-
-     --card: 222 45% 11%;
-    --card-foreground: 210 40% 98%;
-
-     --popover: 222 45% 11%;
-    --popover-foreground: 210 40% 98%;
-
-     --primary: 160 70% 42%;
-    --primary-foreground: 0 0% 100%;
-
-     --secondary: 158 55% 48%;
-    --secondary-foreground: 0 0% 0%;
-
-     --muted: 222 40% 14%;
-     --muted-foreground: 215 25% 68%;
-
-     --accent: 160 70% 42%;
-    --accent-foreground: 0 0% 100%;
-
-     --border: 222 40% 16%;
-     --input: 222 40% 16%;
-     --ring: 160 70% 42%;
-
-     --glow-primary: 0 0 15px hsl(160 70% 42% / 0.35);
-     --glow-secondary: 0 0 15px hsl(158 55% 48% / 0.35);
-     --glow-strong: 0 0 25px hsl(160 70% 42% / 0.5);
-    
-     --gradient-primary: linear-gradient(135deg, hsl(160 70% 42%), hsl(158 55% 48%));
-     --gradient-dark: linear-gradient(180deg, hsl(222 50% 7%), hsl(222 55% 4%));
-  }
-
-  /* ==============================
-     FRIDAY - Earth Tone Elegan Theme
-     Kesan dewasa, tenang, berkarakter
-     ============================== */
-  .dark.theme-friday {
-     --background: 25 40% 10%;
-     --foreground: 38 30% 92%;
-
-     --card: 25 38% 14%;
-     --card-foreground: 38 30% 92%;
-
-     --popover: 25 38% 14%;
-     --popover-foreground: 38 30% 92%;
-
-     --primary: 38 55% 75%;
-     --primary-foreground: 25 40% 10%;
-
-     --secondary: 30 45% 55%;
-     --secondary-foreground: 25 40% 10%;
-
-     --muted: 25 30% 18%;
-     --muted-foreground: 38 20% 68%;
-
-     --accent: 38 55% 75%;
-     --accent-foreground: 25 40% 10%;
-
-     --border: 25 32% 22%;
-     --input: 25 32% 22%;
-     --ring: 38 55% 75%;
-
-     --glow-primary: 0 0 15px hsl(38 55% 75% / 0.25);
-     --glow-secondary: 0 0 15px hsl(30 45% 55% / 0.25);
-     --glow-strong: 0 0 25px hsl(38 55% 75% / 0.4);
-    
-     --gradient-primary: linear-gradient(135deg, hsl(38 55% 75%), hsl(30 45% 55%));
-     --gradient-dark: linear-gradient(180deg, hsl(25 40% 10%), hsl(25 45% 6%));
-  }
-
-  /* ==============================
-     SATURDAY - Slate Soft Dark Theme
-     Kesan santai, tetap profesional
+     SATURDAY - Nila (Indigo) Theme
+     Kesan misterius, dalam, bijaksana
      ============================== */
   .dark.theme-saturday {
-     --background: 217 35% 9%;
-    --foreground: 210 40% 98%;
+    --background: 245 40% 7%;
+    --foreground: 240 30% 98%;
 
-     --card: 217 32% 13%;
-    --card-foreground: 210 40% 98%;
+    --card: 245 35% 11%;
+    --card-foreground: 240 30% 98%;
 
-     --popover: 217 32% 13%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 245 35% 11%;
+    --popover-foreground: 240 30% 98%;
 
-     --primary: 215 25% 70%;
-     --primary-foreground: 217 35% 9%;
+    --primary: 245 58% 51%;
+    --primary-foreground: 0 0% 100%;
 
-     --secondary: 215 20% 52%;
+    --secondary: 239 84% 67%;
     --secondary-foreground: 0 0% 100%;
 
-     --muted: 217 28% 16%;
-     --muted-foreground: 215 18% 65%;
+    --muted: 245 30% 15%;
+    --muted-foreground: 245 20% 68%;
 
-     --accent: 215 25% 70%;
-     --accent-foreground: 217 35% 9%;
+    --accent: 245 58% 51%;
+    --accent-foreground: 0 0% 100%;
 
-     --border: 217 28% 18%;
-     --input: 217 28% 18%;
-     --ring: 215 25% 70%;
+    --border: 245 30% 18%;
+    --input: 245 30% 18%;
+    --ring: 245 58% 51%;
 
-     --glow-primary: 0 0 15px hsl(215 25% 70% / 0.25);
-     --glow-secondary: 0 0 15px hsl(215 20% 52% / 0.25);
-     --glow-strong: 0 0 25px hsl(215 25% 70% / 0.4);
+    --glow-primary: 0 0 15px hsl(245 58% 51% / 0.35);
+    --glow-secondary: 0 0 15px hsl(239 84% 67% / 0.35);
+    --glow-strong: 0 0 25px hsl(245 58% 51% / 0.5);
     
-     --gradient-primary: linear-gradient(135deg, hsl(215 25% 70%), hsl(215 20% 52%));
-     --gradient-dark: linear-gradient(180deg, hsl(217 35% 9%), hsl(217 40% 5%));
+    --gradient-primary: linear-gradient(135deg, hsl(245 58% 51%), hsl(239 84% 67%));
+    --gradient-dark: linear-gradient(180deg, hsl(245 40% 7%), hsl(245 45% 4%));
   }
 
   /* ==============================
-     SUNDAY - Soft Blue Theme
-     Kesan friendly, human, approachable
+     SUNDAY - Ungu (Violet) Theme
+     Kesan royal, kreatif, spiritual
      ============================== */
   .dark.theme-sunday {
-     --background: 220 25% 7%;
-    --foreground: 210 40% 98%;
+    --background: 280 40% 6%;
+    --foreground: 280 25% 98%;
 
-     --card: 220 22% 11%;
-    --card-foreground: 210 40% 98%;
+    --card: 280 35% 10%;
+    --card-foreground: 280 25% 98%;
 
-     --popover: 220 22% 11%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 280 35% 10%;
+    --popover-foreground: 280 25% 98%;
 
-     --primary: 199 80% 55%;
-     --primary-foreground: 220 25% 7%;
+    --primary: 280 73% 60%;
+    --primary-foreground: 0 0% 100%;
 
-     --secondary: 201 85% 68%;
-     --secondary-foreground: 220 25% 7%;
+    --secondary: 285 70% 50%;
+    --secondary-foreground: 0 0% 100%;
 
-     --muted: 220 20% 14%;
-     --muted-foreground: 210 18% 68%;
+    --muted: 280 30% 14%;
+    --muted-foreground: 280 20% 68%;
 
-     --accent: 199 80% 55%;
-     --accent-foreground: 220 25% 7%;
+    --accent: 280 73% 60%;
+    --accent-foreground: 0 0% 100%;
 
-     --border: 220 20% 16%;
-     --input: 220 20% 16%;
-     --ring: 199 80% 55%;
+    --border: 280 30% 18%;
+    --input: 280 30% 18%;
+    --ring: 280 73% 60%;
 
-     --glow-primary: 0 0 15px hsl(199 80% 55% / 0.35);
-     --glow-secondary: 0 0 15px hsl(201 85% 68% / 0.35);
-     --glow-strong: 0 0 25px hsl(199 80% 55% / 0.5);
+    --glow-primary: 0 0 15px hsl(280 73% 60% / 0.35);
+    --glow-secondary: 0 0 15px hsl(285 70% 50% / 0.35);
+    --glow-strong: 0 0 25px hsl(280 73% 60% / 0.5);
     
-     --gradient-primary: linear-gradient(135deg, hsl(199 80% 55%), hsl(201 85% 68%));
-     --gradient-dark: linear-gradient(180deg, hsl(220 25% 7%), hsl(220 30% 4%));
+    --gradient-primary: linear-gradient(135deg, hsl(280 73% 60%), hsl(285 70% 50%));
+    --gradient-dark: linear-gradient(180deg, hsl(280 40% 6%), hsl(280 45% 3%));
   }
 
   /* Default Dark Mode (Fallback - same as Wednesday Matrix) */

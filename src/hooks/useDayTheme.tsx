@@ -19,14 +19,14 @@
   6: "saturday",
 };
 
- export const themeNames: Record<DayTheme, string> = {
-  monday: "Navy Blue",
-  tuesday: "Dark Gray + Blue",
-  wednesday: "Matrix Futuristik",
-  thursday: "Charcoal + Emerald",
-  friday: "Earth Tone Elegan",
-  saturday: "Slate Soft Dark",
-  sunday: "Soft Blue",
+export const themeNames: Record<DayTheme, string> = {
+  monday: "Merah",
+  tuesday: "Jingga",
+  wednesday: "Kuning",
+  thursday: "Hijau",
+  friday: "Biru",
+  saturday: "Nila",
+  sunday: "Ungu",
 };
 
  const THEME_STORAGE_KEY = "user-theme-preference";
