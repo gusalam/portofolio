@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Play, LogOut } from "lucide-react";
 import { useRef, useEffect } from "react";
-import lockedBg from "@/assets/locked-bg.gif";
+import lockedBg from "@/assets/locked-bg.jpg";
 
 interface WelcomeModalProps {
   open: boolean;
